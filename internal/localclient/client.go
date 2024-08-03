@@ -1,4 +1,4 @@
-package internal
+package localclient
 
 import (
 	"fmt"

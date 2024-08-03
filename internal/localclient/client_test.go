@@ -1,4 +1,4 @@
-package internal_test
+package localclient_test
 
 import (
 	"encoding/json"
@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/tecchu11/lambda-invoker-go/internal"
+	"github.com/tecchu11/lambda-invoker-go/internal/localclient"
 )
 
 func TestIntegration(t *testing.T) {
@@ -22,7 +22,7 @@ func TestIntegration(t *testing.T) {
 	}()
 	time.Sleep(100 * time.Millisecond)
 
-	client, err := internal.New(9000)
+	client, err := localclient.New(9000)
 	if err != nil {
 		t.Fatal(err)
 	}
