@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/tecchu11/lambda-invoker-go/internal"
+	"github.com/tecchu11/lambda-invoker-go/internal/localclient"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	)
 	flag.Parse()
 
-	client, err := internal.New(*p)
+	client, err := localclient.New(*p)
 	if err != nil {
 		log.Fatal(err)
 	}
