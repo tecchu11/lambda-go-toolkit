@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"github.com/aws/aws-lambda-go/lambda"
-	"github.com/tecchu11/lambda-invoker-go/internal/localclient"
+	"github.com/tecchu11/lambda-go-toolkit/internal/localclient"
 )
 
 func TestIntegration(t *testing.T) {

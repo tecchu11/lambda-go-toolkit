@@ -1,4 +1,4 @@
-module github.com/tecchu11/lambda-invoker-go
+module github.com/tecchu11/lambda-go-toolkit
 
 go 1.22
 

@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/tecchu11/lambda-invoker-go/internal/localclient"
+	"github.com/tecchu11/lambda-go-toolkit/internal/localclient"
 )
 
 func main() {
