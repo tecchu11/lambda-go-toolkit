@@ -9,7 +9,7 @@ import (
 	"testing"
 
 	"github.com/aws/aws-lambda-go/lambdacontext"
-	"github.com/tecchu11/lambda-invoker-go/pkg/logger"
+	"github.com/tecchu11/lambda-go-toolkit/pkg/logger"
 )
 
 func TestNew(t *testing.T) {
