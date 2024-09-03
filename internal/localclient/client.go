@@ -5,6 +5,7 @@ import (
 	"net/rpc"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/aws/aws-lambda-go/lambda/messages"
 )
@@ -35,9 +36,14 @@ func (c *Client) Do(payload []byte) ([]byte, error) {
 	if resPing.Error != nil {
 		return nil, fmt.Errorf("ping response\n%v", resPing.Error)
 	}
+	deadline := time.Now().Add(15 * time.Minute)
 	var (
 		reqInvoke = messages.InvokeRequest{
 			Payload: payload,
+			Deadline: messages.InvokeRequest_Timestamp{
+				Seconds: int64(deadline.Unix()),
+				Nanos:   int64(deadline.Nanosecond()),
+			},
 		}
 		resInvoke messages.InvokeResponse
 	)
