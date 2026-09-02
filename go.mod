@@ -1,5 +1,5 @@
 module github.com/tecchu11/lambda-go-toolkit
 
-go 1.22
+go 1.26
 
-require github.com/aws/aws-lambda-go v1.48.0
+require github.com/aws/aws-lambda-go v1.55.0
